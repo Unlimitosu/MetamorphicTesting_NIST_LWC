@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\ASCON">
+      <UniqueIdentifier>{d4a61c36-c95e-48c2-811d-42bb00409e22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Elephant">
+      <UniqueIdentifier>{2e9a66c8-cc83-464a-9e33-593a47ac2cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\GIFT-COFB">
+      <UniqueIdentifier>{fc8192a4-b778-45f1-994c-65d2107a9694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Grain-128AEAD">
+      <UniqueIdentifier>{e03def5a-61a0-49b9-8a44-9650b0e56552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ISAP">
+      <UniqueIdentifier>{32efd867-d4a1-4d62-a321-85f7c25a6a8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Romulus">
+      <UniqueIdentifier>{968ff46b-9027-4a15-9241-7746dcae42ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Sparkle">
+      <UniqueIdentifier>{876880d6-59c1-4419-80a7-ceeeb54f4ca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\TinyJAMBU">
+      <UniqueIdentifier>{72ee87d4-4ba1-493d-8c46-0f6419fdeccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Xoodyak">
+      <UniqueIdentifier>{e8a8c636-619b-4e4d-b287-c0b1b5afa8bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ASCON">
+      <UniqueIdentifier>{369da276-1e67-44e5-88e8-f516b89d6221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Elephant">
+      <UniqueIdentifier>{e4bc4216-f3d2-4737-96e9-afe15205bf1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\GIFT-COFB">
+      <UniqueIdentifier>{d1dec24d-c95d-451a-9062-420558bf12f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Grain-128AEAD">
+      <UniqueIdentifier>{148328bd-1f54-48a6-9f86-9856c430be08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ISAP">
+      <UniqueIdentifier>{82fa0812-8059-4a3b-a4b3-a2e10a2c832e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Xoodyak">
+      <UniqueIdentifier>{3db5bd13-718c-4ba5-ade5-d4017db43fac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\TinyJAMBU">
+      <UniqueIdentifier>{53dc882c-cfa7-4080-89d8-ae517a987ca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Sparkle">
+      <UniqueIdentifier>{60685210-a8eb-4fb0-9d51-d90ea9ee58fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Romulus">
+      <UniqueIdentifier>{39359d49-7ade-49a0-90cd-474671b0353b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Testings">
+      <UniqueIdentifier>{f683aa1e-a5d6-462b-b28d-5651410bfb46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Testings">
+      <UniqueIdentifier>{07e177c4-6b80-4051-b5af-c69cd4441847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Photon-Beetle">
+      <UniqueIdentifier>{881e8ed2-71e2-4762-b86e-fdaf610979f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Photon-Beetle">
+      <UniqueIdentifier>{252b52c9-24f7-4f26-8844-597bb04bf3b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="__ascon_hash.c">
+      <Filter>소스 파일\ASCON</Filter>
+    </ClCompile>
+    <ClCompile Include="__ascon_printstate.c">
+      <Filter>소스 파일\ASCON</Filter>
+    </ClCompile>
+    <ClCompile Include="__gift_encrypt.c">
+      <Filter>소스 파일\GIFT-COFB</Filter>
+    </ClCompile>
+    <ClCompile Include="__gift_gift128.c">
+      <Filter>소스 파일\GIFT-COFB</Filter>
+    </ClCompile>
+    <ClCompile Include="__isap_Ascon-reference.c">
+      <Filter>소스 파일\ISAP</Filter>
+    </ClCompile>
+    <ClCompile Include="__isap_crypto_aead.c">
+      <Filter>소스 파일\ISAP</Filter>
+    </ClCompile>
+    <ClCompile Include="__isap_hash.c">
+      <Filter>소스 파일\ISAP</Filter>
+    </ClCompile>
+    <ClCompile Include="__isap_isap.c">
+      <Filter>소스 파일\ISAP</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="__sparkle_encrypt.c">
+      <Filter>소스 파일\Sparkle</Filter>
+    </ClCompile>
+    <ClCompile Include="__sparkle_genkat_hash.c">
+      <Filter>소스 파일\Sparkle</Filter>
+    </ClCompile>
+    <ClCompile Include="__sparkle_hash.c">
+      <Filter>소스 파일\Sparkle</Filter>
+    </ClCompile>
+    <ClCompile Include="__sparkle_sparkle_ref.c">
+      <Filter>소스 파일\Sparkle</Filter>
+    </ClCompile>
+    <ClCompile Include="__tinyjambu_encrypt.c">
+      <Filter>소스 파일\TinyJAMBU</Filter>
+    </ClCompile>
+    <ClCompile Include="__grain_grain128aead-v2.c">
+      <Filter>소스 파일\Grain-128AEAD</Filter>
+    </ClCompile>
+    <ClCompile Include="__elephant_encrypt.c">
+      <Filter>소스 파일\Elephant</Filter>
+    </ClCompile>
+    <ClCompile Include="__elephant_spongent.c">
+      <Filter>소스 파일\Elephant</Filter>
+    </ClCompile>
+    <ClCompile Include="encrypt.c">
+      <Filter>소스 파일\Xoodyak</Filter>
+    </ClCompile>
+    <ClCompile Include="hash.c">
+      <Filter>소스 파일\Xoodyak</Filter>
+    </ClCompile>
+    <ClCompile Include="Xoodoo-reference.c">
+      <Filter>소스 파일\Xoodyak</Filter>
+    </ClCompile>
+    <ClCompile Include="Xoodyak.c">
+      <Filter>소스 파일\Xoodyak</Filter>
+    </ClCompile>
+    <ClCompile Include="Metamorphic Testing.c">
+      <Filter>소스 파일\Testings</Filter>
+    </ClCompile>
+    <ClCompile Include="Run MT.c">
+      <Filter>소스 파일\Testings</Filter>
+    </ClCompile>
+    <ClCompile Include="__ascon_decrypt.c">
+      <Filter>소스 파일\ASCON</Filter>
+    </ClCompile>
+    <ClCompile Include="__ascon_encrypt.c">
+      <Filter>소스 파일\ASCON</Filter>
+    </ClCompile>
+    <ClCompile Include="__romulusn_decrypt.c">
+      <Filter>소스 파일\Romulus</Filter>
+    </ClCompile>
+    <ClCompile Include="__romulusn_encrypt.c">
+      <Filter>소스 파일\Romulus</Filter>
+    </ClCompile>
+    <ClCompile Include="__romulusn_hash.c">
+      <Filter>소스 파일\Romulus</Filter>
+    </ClCompile>
+    <ClCompile Include="__romulusn_romulus_n_reference.c">
+      <Filter>소스 파일\Romulus</Filter>
+    </ClCompile>
+    <ClCompile Include="__romulusn_skinny_reference.c">
+      <Filter>소스 파일\Romulus</Filter>
+    </ClCompile>
+    <ClCompile Include="__photon_encrypt.c">
+      <Filter>소스 파일\Photon-Beetle</Filter>
+    </ClCompile>
+    <ClCompile Include="__photon_photon.c">
+      <Filter>소스 파일\Photon-Beetle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__ascon_api.h">
+      <Filter>헤더 파일\ASCON</Filter>
+    </ClInclude>
+    <ClInclude Include="__ascon_ascon.h">
+      <Filter>헤더 파일\ASCON</Filter>
+    </ClInclude>
+    <ClInclude Include="__ascon_permutations.h">
+      <Filter>헤더 파일\ASCON</Filter>
+    </ClInclude>
+    <ClInclude Include="__ascon_printstate.h">
+      <Filter>헤더 파일\ASCON</Filter>
+    </ClInclude>
+    <ClInclude Include="__ascon_round.h">
+      <Filter>헤더 파일\ASCON</Filter>
+    </ClInclude>
+    <ClInclude Include="__ascon_word.h">
+      <Filter>헤더 파일\ASCON</Filter>
+    </ClInclude>
+    <ClInclude Include="__gift_api.h">
+      <Filter>헤더 파일\GIFT-COFB</Filter>
+    </ClInclude>
+    <ClInclude Include="__gift_gift128.h">
+      <Filter>헤더 파일\GIFT-COFB</Filter>
+    </ClInclude>
+    <ClInclude Include="__isap_api.h">
+      <Filter>헤더 파일\ISAP</Filter>
+    </ClInclude>
+    <ClInclude Include="__isap_Ascon-reference.h">
+      <Filter>헤더 파일\ISAP</Filter>
+    </ClInclude>
+    <ClInclude Include="__isap_brg_endian.h">
+      <Filter>헤더 파일\ISAP</Filter>
+    </ClInclude>
+    <ClInclude Include="__isap_isap.h">
+      <Filter>헤더 파일\ISAP</Filter>
+    </ClInclude>
+    <ClInclude Include="__sparkle_api.h">
+      <Filter>헤더 파일\Sparkle</Filter>
+    </ClInclude>
+    <ClInclude Include="__sparkle_esch_cfg.h">
+      <Filter>헤더 파일\Sparkle</Filter>
+    </ClInclude>
+    <ClInclude Include="__sparkle_schwaemm_cfg.h">
+      <Filter>헤더 파일\Sparkle</Filter>
+    </ClInclude>
+    <ClInclude Include="__sparkle_sparkle_ref.h">
+      <Filter>헤더 파일\Sparkle</Filter>
+    </ClInclude>
+    <ClInclude Include="__tinyjambu_ encrypt.h">
+      <Filter>헤더 파일\TinyJAMBU</Filter>
+    </ClInclude>
+    <ClInclude Include="__tinyjambu_api.h">
+      <Filter>헤더 파일\TinyJAMBU</Filter>
+    </ClInclude>
+    <ClInclude Include="__grain_api.h">
+      <Filter>헤더 파일\Grain-128AEAD</Filter>
+    </ClInclude>
+    <ClInclude Include="__grain_grain128aead-v2.h">
+      <Filter>헤더 파일\Grain-128AEAD</Filter>
+    </ClInclude>
+    <ClInclude Include="__elephant_api.h">
+      <Filter>헤더 파일\Elephant</Filter>
+    </ClInclude>
+    <ClInclude Include="__elephant_elephant_176.h">
+      <Filter>헤더 파일\Elephant</Filter>
+    </ClInclude>
+    <ClInclude Include="align.h">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </ClInclude>
+    <ClInclude Include="api.h">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </ClInclude>
+    <ClInclude Include="brg_endian.h">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </ClInclude>
+    <ClInclude Include="Cyclist.h">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </ClInclude>
+    <ClInclude Include="Xoodoo.h">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </ClInclude>
+    <ClInclude Include="Xoodoo-SnP.h">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </ClInclude>
+    <ClInclude Include="Xoodyak.h">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </ClInclude>
+    <ClInclude Include="Metamorphic Testing.h">
+      <Filter>헤더 파일\Testings</Filter>
+    </ClInclude>
+    <ClInclude Include="Run MT.h">
+      <Filter>헤더 파일\Testings</Filter>
+    </ClInclude>
+    <ClInclude Include="__romulusn_api.h">
+      <Filter>헤더 파일\Romulus</Filter>
+    </ClInclude>
+    <ClInclude Include="__romulusn_romulus_n.h">
+      <Filter>헤더 파일\Romulus</Filter>
+    </ClInclude>
+    <ClInclude Include="__romulusn_skinny.h">
+      <Filter>헤더 파일\Romulus</Filter>
+    </ClInclude>
+    <ClInclude Include="__romulusn_variant.h">
+      <Filter>헤더 파일\Romulus</Filter>
+    </ClInclude>
+    <ClInclude Include="__photon_api.h">
+      <Filter>헤더 파일\Photon-Beetle</Filter>
+    </ClInclude>
+    <ClInclude Include="__photon_beetle.h">
+      <Filter>헤더 파일\Photon-Beetle</Filter>
+    </ClInclude>
+    <ClInclude Include="__photon_photon.h">
+      <Filter>헤더 파일\Photon-Beetle</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cyclist.inc">
+      <Filter>헤더 파일\Xoodyak</Filter>
+    </None>
+  </ItemGroup>
+</Project>
