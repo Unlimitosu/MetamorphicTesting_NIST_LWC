@@ -1784,6 +1784,92 @@ void UT_Sparkle_SCHWAEMM(uint8_t* Plaintext, size_t size) {
 	if (buf_copy)  free(buf_copy);
 }
 
+void UT_Sparkle_PassUT(uint8_t* Plaintext, size_t size) {
+	//! Parameters
+	uint8_t * digest1 = NULL;
+	uint8_t* digest2 = NULL;	//! Digested message
+	uint8_t* msg_frag1 = NULL;
+	uint8_t* msg_frag2 = NULL;	//! Message fragment for update test
+	uint8_t* buf = NULL;	//! Copy of Plaintext
+	uint8_t* buf_copy = NULL;	//! Copy od Plaintext
+
+	int i = 0, j = 0;	//! Index for for loops
+	int errnum = 1;	//! The number of Errors for debugging
+	int flag = 1;	//! Flag will be 0 if the test fails
+
+	SparkleStateUT state = { 0x00, };
+
+	//! Memory Allocations
+	digest1 = (uint8_t*)calloc(SPARKLE_DIGESTLEN, sizeof(uint8_t));
+	digest2 = (uint8_t*)calloc(SPARKLE_DIGESTLEN, sizeof(uint8_t));
+	buf = (uint8_t*)calloc(size * 2, sizeof(uint8_t)); //32
+
+	assert(digest1 != NULL);
+	assert(digest2 != NULL);
+	assert(buf != NULL);
+
+	//! Copy plaintext to buf
+	memcpy(buf, Plaintext, size);
+	memcpy(buf + size, Plaintext, size);
+
+	for (i = 1; i <= size; i++) {
+		for (j = 1; j <= size; j++) {
+			buf_copy = (uint8_t*)calloc(i + j, sizeof(uint8_t));
+			msg_frag1 = (uint8_t*)calloc(i, sizeof(uint8_t));
+			msg_frag2 = (uint8_t*)calloc(j, sizeof(uint8_t));
+
+			assert(buf_copy != NULL);
+			assert(msg_frag1 != NULL);
+			assert(msg_frag2 != NULL);
+
+			memcpy(buf_copy, buf, i + j);
+			memcpy(msg_frag1, buf, i);
+			memcpy(msg_frag2, buf + i, j);
+
+			//! Memory copy check
+			if (memcmp(buf_copy, msg_frag1, i)) {
+				printf("Frag1 memory copy fail\n");
+				return;
+			}
+			if (memcmp(buf_copy + i, msg_frag2, j)) {
+				printf("Frag2 memory copy fail\n");
+				return;
+			}
+
+			//! Digest original message
+			__sparkle_crypto_hash(digest1, buf_copy, i + j);
+
+			//! Digest message fragments
+			__sparkle_Initialize_PassUT(&state);
+			__sparkle_ProcessMessage_PassUT(&state, msg_frag1, i);
+			__sparkle_ProcessMessage_PassUT(&state, msg_frag2, j);
+			__sparkle_Finalize_PassUT(&state, digest2);
+
+			//! Error handling
+			//! If digest1 != digest2 -> Error
+			if (memcmp(digest1, digest2, SPARKLE_DIGESTLEN)) {
+				printf("ERROR#%d\n", errnum++);
+				printf("Frag1: "); printBlock(msg_frag1);
+				printf("Frag2: "); printBlock(msg_frag2);
+				printf("buf_copy: "); printBlock(buf_copy);
+				printf("digest1: "); printBlock(digest1);
+				printf("digest2: "); printBlock(digest2); printf("\n");
+				flag = 0;
+			}
+		}
+	}
+
+	if (flag) printf("Sparkle-ESCH Update Test Success!(IMPROVED)\n");
+
+	if (digest1)   free(digest1);
+	if (digest2)   free(digest2);
+	if (msg_frag1) free(msg_frag1);
+	if (msg_frag2) free(msg_frag2);
+	if (buf)	   free(buf);
+	if (buf_copy)  free(buf_copy);
+}
+
+
 /***************************TinyJAMBU*******************************/
 void BCT_Tinyjambu(uint8_t* Plaintext, size_t size) {
 
