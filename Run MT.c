@@ -32,6 +32,8 @@ void Sparkle_Test() {
 	BET_Sparkle_ESCH(P, SIZE16);
 	UT_Sparkle_SCHWAEMM(P, SIZE16);
 	UT_Sparkle_ESCH(P, SIZE16);
+	
+	UT_Sparkle_PassUT(P, SIZE16);
 	printf("\n\n");
 }
 void GIFT_Test() {
