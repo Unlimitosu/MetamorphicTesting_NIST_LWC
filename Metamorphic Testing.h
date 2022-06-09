@@ -69,6 +69,7 @@ void BCT_Sparkle_ESCH(uint8_t* Plaintext, size_t size);
 void BET_Sparkle_ESCH(uint8_t* Plaintext, size_t size);
 void UT_Sparkle_ESCH(uint8_t* Plaintext, size_t size);
 void UT_Sparkle_SCHWAEMM(uint8_t* Plaintext, size_t size);
+void UT_Sparkle_PassUT(uint8_t* Plaintext, size_t size);
 
 /***************************TinyJAMBU*******************************/
 void BCT_Tinyjambu(uint8_t* Plaintext, size_t size);
